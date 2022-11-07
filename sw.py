@@ -142,7 +142,7 @@ def choice():
         clearScreen()
         help()
     elif action[0:2] == "ac":
-        access()
+        access(action)
     else:
         print(wrongMessage)
         turn()
@@ -167,15 +167,15 @@ def use(playerInventory, action):
                 if loweredItem != rooms[room]["keyItem"].lower():
                     continue
                 elif loweredItem == rooms[room]["keyItem"].lower():
-                    print("You use the " + rooms[room]["keyItem"] + " on the " + rooms[room]["name"])
+                    print(bcolors.CYAN + "You use the " + rooms[room]["keyItem"] + " on the " + rooms[room]["name"] + bcolors.ENDC)
                     rooms[room]["locked"] = "false"
                     break
                 else:
-                    print("That item can't be used here.")
+                    print(bcolors.YELLOW + "That item can't be used here." + bcolors.ENDC)
         else:
-            print("That item is not in your inventory.")
+            print(bcolors.YELLOW + "That item is not in your inventory." + bcolors.ENDC)
     else:
-        print("There is nothing to use.")
+        print(bcolors.YELLOW + "There is nothing to use." + bcolors.ENDC)
     turn()
 
 def get(playerInventory, action):
@@ -183,7 +183,7 @@ def get(playerInventory, action):
     if rooms[currentRoom]["item"] != "Empty":
         if rooms[currentRoom]["item"].lower() in action:
             playerInventory.append(rooms[currentRoom]["item"])
-            print("You got the " + rooms[currentRoom]["item"])
+            print(bcolors.CYAN + "You got the " + rooms[currentRoom]["item"] + bcolors.ENDC)
             rooms[currentRoom]["item"] = "Empty"
         else:
             print(bcolors.YELLOW + "There is no " + action[4:] + " here." + bcolors.ENDC)
@@ -216,6 +216,7 @@ def start():
     print(ship)
     print(bcolors.ENDC)
     input(" "*36 + "Press enter to continue")
+    clearScreen()
     roomTitle()
     print(bcolors.CYAN + rooms[currentRoom]["description"] + bcolors.ENDC)
     turn()
@@ -239,7 +240,7 @@ def win():
 def textTest():
     for room in rooms:
         if rooms[room]["name"] != "Empty":
-            print(bcolors.GREEN + "*"*50)
+            print(bcolors.BLUE + "*"*50)
             if len(rooms[room]["name"]) % 2 == 0:
                 print("***" + " "*(25 - int(len(rooms[room]["name"])/2) - 3) + rooms[room]["name"] + " "*(25 - int(len(rooms[room]["name"])/2) - 3) + "***")
             else:
@@ -251,7 +252,7 @@ def textTest():
 def access(action):
     if rooms[currentRoom]["accessObject"] != "Empty":
         if rooms[currentRoom]["accessObject"].lower() in action:
-            print("You accessed the " + rooms[currentRoom]["accessObject"])
+            print(bcolors.CYAN + "You accessed the " + rooms[currentRoom]["accessObject"] + bcolors.ENDC)
             rooms[currentRoom]["accessed"] = "true"
         else:
             print(bcolors.YELLOW + "There is no " + action[4:] + " to access here." + bcolors.ENDC)
