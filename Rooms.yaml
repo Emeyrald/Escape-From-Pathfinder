@@ -1,0 +1,324 @@
+A1:
+  name:
+    "Empty"
+  northDoor:
+    "Empty"
+  southDoor:
+    "Empty"
+  eastDoor:
+    "Empty"
+  westDoor:
+    "Empty"
+  item:
+    "Empty"
+  description:
+    "Empty"
+  locked:
+    "false"
+  keyItem:
+    "Empty"
+  details:
+    "Empty"
+  winningRoom:
+    "false"
+  accessObject:
+    "Empty"
+  accessed:
+    "false"
+A2:
+  name:
+    "Engineering Bay"
+  northDoor:
+    "Empty"
+  southDoor:
+    "Empty"
+  eastDoor:
+    "B2"
+  westDoor:
+    "Empty"
+  item:
+    "Hangar Keycard"
+  description:
+    "You have entered the Engineering Bay, you see pipes, \ncomputers, and other maintenance equipment thrown \nabout. The hallway in which you came from is to your \neast."
+  locked:
+    "true"
+  keyItem:
+    "Blaster"
+  details:
+    "After rummaging through the mess of equipment, you \nsee what looks like a Hangar Keycard."
+  winningRoom:
+    "false"
+  accessObject:
+    "Empty"
+  accessed:
+    "false"
+A3:
+  name:
+    "Empty"
+  northDoor:
+    "Empty"
+  southDoor:
+    "Empty"
+  eastDoor:
+    "Empty"
+  westDoor:
+    "Empty"
+  item:
+    "Empty"
+  description:
+    "Empty"
+  locked:
+    "false"
+  keyItem:
+    "Empty"
+  details:
+    "Empty"
+  winningRoom:
+    "false"
+  accessObject:
+    "Empty"
+  accessed:
+    "false"
+A4:
+  name:
+    "Empty"
+  northDoor:
+    "Empty"
+  southDoor:
+    "Empty"
+  eastDoor:
+    "Empty"
+  westDoor:
+    "Empty"
+  item:
+    "Empty"
+  description:
+    "Empty"
+  locked:
+    "false"
+  keyItem:
+    "Empty"
+  details:
+    "Empty"
+  winningRoom:
+    "false"
+  accessObject:
+    "Empty"
+  accessed:
+    "false"
+B1:
+  name:
+    "Hangar"
+  northDoor:
+    "Empty"
+  southDoor:
+    "B2"
+  eastDoor:
+    "Empty"
+  westDoor:
+    "Empty"
+  item:
+    "Empty"
+  description:
+    "As you enter the Hangar, heat and smoke rushes out, \nwhich causes you to step back a bit. You see a mess \nof fire, as well as destroyed ships and equipment. \nAny thoughts of using your fighter to escape are \ngone. The hallway you came from is to your south."
+  locked:
+    "true"
+  keyItem:
+    "Hangar Keycard"
+  details:
+    "The fire is too big to search for anything useful."
+  winningRoom:
+    "false"
+  accessObject:
+    "Empty"
+  accessed:
+    "false"
+B2:
+  name:
+    "Hallway 2"
+  northDoor:
+    "B1"
+  southDoor:
+    "B3"
+  eastDoor:
+    "C2"
+  westDoor:
+    "A2"
+  item:
+    "Locker Room Keycard"
+  description:
+    "You are in the hallway that connects to the hallway \nto your south. The hallway continues east. The \nEngineering Bay is located to the west. The sight \nof the door to the Engineering Bay reminds you of \nthe time on Ord Mantell where you shot a door panel \nwith your blaster to open it. The Hangar is located \nto your north."
+  locked:
+    "false"
+  keyItem:
+    "Empty"
+  details:
+    "As you further examine the room, you see a fellow \npilot slumped against the wall. You look closely \nat the body and see what looks like a Locker Room \nKeycard in his lifeless hand."
+  winningRoom:
+    "false"
+  accessObject:
+    "Empty"
+  accessed:
+    "false"
+B3:
+  name:
+    "Hallway 1"
+  northDoor:
+    "B2"
+  southDoor:
+    "B4"
+  eastDoor:
+    "C3"
+  westDoor:
+    "Empty"
+  item:
+    "Glowrod"
+  description:
+    "You have entered a hallway that stems from your \nquarters to the south. The hallway continues north. \nThe Locker Room is located to the east."
+  locked:
+    "false"
+  keyItem:
+    "Empty"
+  details:
+    "After fumbling around in the dark, you lay your \nhands on what feels like a Glowrod."
+  winningRoom:
+    "false"
+  accessObject:
+    "Empty"
+  accessed:
+    "false"
+B4:
+  name:
+    "Player's Quarters"
+  northDoor:
+    "B3"
+  southDoor:
+    "Empty"
+  eastDoor:
+    "Empty"
+  westDoor:
+    "Empty"
+  item:
+    "Blaster"
+  description:
+    "This is your room, the standard for a fighter pilot. \nNot really much to look at. The only exit is to the \nnorth."
+  locked:
+    "false"
+  keyItem:
+    "Empty"
+  details:
+    "Upon further inspection of the room, you see your \nblaster that was used yesteday for target practice."
+  winningRoom:
+    "false"
+  accessObject:
+    "Empty"
+  accessed:
+    "false"
+C1:
+  name:
+    "Escape Pods"
+  northDoor:
+    "Empty"
+  southDoor:
+    "C2"
+  eastDoor:
+    "Empty"
+  westDoor:
+    "Empty"
+  item:
+    "Empty"
+  description:
+    "As you enter the room, you see that all but one of \nthe escape pods are gone. The hallway you came from \nis to your south."
+  locked:
+    "false"
+  keyItem:
+    "Empty"
+  details:
+    "As you search the room, you find nothing of importance."
+  winningRoom:
+    "true"
+  accessObject:
+    "Escape Pods"
+  accessed:
+    "false"
+C2:
+  name:
+    "Hallway 3"
+  northDoor:
+    "C1"
+  southDoor:
+    "Empty"
+  eastDoor:
+    "Empty"
+  westDoor:
+    "B2"
+  item:
+    "Empty"
+  description:
+    "This hallway forks east from the main hallway to \nthe west. The Escape Pods are to your north."
+  locked:
+    "false"
+  keyItem:
+    "Empty"
+  details:
+    "As you look for anything useful in the hallway, \nyou find nothing of importance."
+  winningRoom:
+    "false"
+  accessObject:
+    "Empty"
+  accessed:
+    "false"
+C3:
+  name:
+    "Locker Room"
+  northDoor:
+    "Empty"
+  southDoor:
+    "Empty"
+  eastDoor:
+    "Empty"
+  westDoor:
+    "B3"
+  item:
+    "Flight Suit"
+  description:
+    "As you enter, a strong stench hits you hard, you \nrecognize it as the smell of BO and Flight Suits. \nThe hallway that you came from is to your west."
+  locked:
+    "true"
+  keyItem:
+    "Locker Room Keycard"
+  details:
+    "You head straight to your locker, open it, and find \nyour Flight Suit inside."
+  winningRoom:
+    "false"
+  accessObject:
+    "Empty"
+  accessed:
+    "false"
+C4:
+  name:
+    "Empty"
+  northDoor:
+    "Empty"
+  southDoor:
+    "Empty"
+  eastDoor:
+    "Empty"
+  westDoor:
+    "Empty"
+  item:
+    "Empty"
+  description:
+    "Empty"
+  locked:
+    "false"
+  keyItem:
+    "Empty"
+  details:
+    "Empty"
+  winningRoom:
+    "false"
+  accessObject:
+    "Empty"
+  accessed:
+    "false"
