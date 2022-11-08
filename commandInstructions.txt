@@ -1,0 +1,4 @@
+You command yourself through the game, 
+communicating your desires to the computer 
+by typing short instructions, you can only 
+state what it is you wish to do.

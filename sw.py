@@ -3,17 +3,17 @@ import os
 import platform
 
 class bcolors:
-    PINK = '\033[95m'
-    BLUE = '\033[94m'
-    CYAN = '\033[96m'
-    GREEN = '\033[92m'
-    YELLOW = '\033[93m'
-    RED = '\033[91m'
-    ENDC = '\033[0m'
-    BOLD = '\033[1m'
-    UNDERLINE = '\033[4m'
+    PINK = "\033[95m"
+    BLUE = "\033[94m"
+    CYAN = "\033[96m"
+    GREEN = "\033[92m"
+    YELLOW = "\033[93m"
+    RED = "\033[91m"
+    ENDC = "\033[0m"
+    BOLD = "\033[1m"
+    UNDERLINE = "\033[4m"
 
-with open('Rooms.yaml', 'r') as file:
+with open("Rooms.yaml", "r") as file:
     rooms = yaml.safe_load(file)
 
 ##### Examples of code
@@ -141,6 +141,9 @@ def choice():
     elif action[0:2] == "he":
         clearScreen()
         help()
+        roomTitle()
+        print(bcolors.CYAN + rooms[currentRoom]["description"] + bcolors.ENDC)
+        turn()
     elif action[0:2] == "ac":
         access(action)
     else:
@@ -202,20 +205,33 @@ def roomTitle():
 
 def clearScreen():
     if platform.system() == "Windows":
-        clear = lambda: os.system('cls')
+        clear = lambda: os.system("cls")
     else:
         clear = lambda: os.system("clear")
     clear()
 
 def start():
-    title = open('title.txt', 'r').read()
-    ship = open("ship.txt", "r").read()
+    with open("title.txt") as titleFile:
+        title = titleFile.read()
+    with open("ship.txt") as shipFile:
+        ship = shipFile.read()
+    with open("wakeUp.txt") as wakeUpFile:
+        wakeUp = wakeUpFile.read()
     print(bcolors.YELLOW)
     print(title)
+    titleFile.close()
     print(bcolors.RED)
     print(ship)
+    shipFile.close()
     print(bcolors.ENDC)
     input(" "*36 + "Press enter to continue")
+    help()
+    print(bcolors.CYAN)
+    clearScreen()
+    print(wakeUp)
+    wakeUpFile.close()
+    print(bcolors.ENDC)
+    input("Press enter to continue")
     clearScreen()
     roomTitle()
     print(bcolors.CYAN + rooms[currentRoom]["description"] + bcolors.ENDC)
@@ -225,17 +241,84 @@ def exitFunction():
     exit()
 
 def help():
-    helpFile = open('help.txt', 'r').read()
-    print(helpFile)
+    with open("backstory.txt") as backstoryFile:
+        backstory = backstoryFile.read()
+    with open("listOfCommands.txt") as listOfCommandsFile:
+        listOfCommands = listOfCommandsFile.read()
+    with open("commandInstructions.txt") as commandInstructionsFile:
+        commandInstructions = commandInstructionsFile.read()
+    with open("loneCommands.txt") as loneCommandsFile:
+        loneCommands = loneCommandsFile.read()
+    with open("addonCommands.txt") as addonCommandsFile:
+        addonCommands = addonCommandsFile.read()
+    with open("reminder.txt") as reminderFile:
+        reminder = reminderFile.read()
+    print(bcolors.CYAN)
+    clearScreen()
+    print(backstory)
+    backstoryFile.close()
+    print(bcolors.ENDC)
+    input("Press enter to continue")
+    print(bcolors.CYAN)
+    clearScreen()
+    print(commandInstructions)
+    commandInstructionsFile.close()
+    print(bcolors.ENDC)
+    input("Press enter to continue")
+    print(bcolors.CYAN)
+    clearScreen()
+    print(listOfCommands)
+    listOfCommandsFile.close()
+    print(bcolors.ENDC)
+    input("Press enter to continue")
+    print(bcolors.CYAN)
+    clearScreen()
+    print(loneCommands)
+    loneCommandsFile.close()
+    print(bcolors.ENDC)
+    input("Press enter to continue")
+    print(bcolors.CYAN)
+    clearScreen()
+    print(addonCommands)
+    addonCommandsFile.close()
+    print(bcolors.ENDC)
+    input("Press enter to continue")
+    print(bcolors.CYAN)
+    clearScreen()
+    print(reminder)
+    reminderFile.close()
+    print(bcolors.ENDC)
     input("Press enter to continue")
     clearScreen()
-    roomTitle()
-    print(bcolors.CYAN + rooms[currentRoom]["description"] + bcolors.ENDC)
-    turn()
 
 def win():
-    print("Congratulations!")
-    exit()
+    with open("escape.txt") as escapeFile:
+        escape = escapeFile.read()
+    with open("destroyedShip.txt") as destroyedShipFile:
+        destroyedShip = destroyedShipFile.read()
+    with open("congratulations.txt") as congratulationsFile:
+        congratulations = congratulationsFile.read()
+    with open("escapePod.txt") as escapePodFile:
+        escapePod = escapePodFile.read()
+    clearScreen()
+    print(bcolors.CYAN)
+    print(escape)
+    escapeFile.close()
+    print(bcolors.RED)
+    print(destroyedShip)
+    destroyedShipFile.close()
+    print(bcolors.ENDC)
+    input("Press enter to continue")
+    clearScreen()
+    print(bcolors.YELLOW)
+    print(congratulations)
+    congratulationsFile.close()
+    print(bcolors.RED)
+    print(escapePod)
+    escapePodFile.close()
+    print(bcolors.ENDC)
+    input("Press enter to exit the game")
+    exitFunction()
 
 def textTest():
     for room in rooms:
@@ -261,4 +344,5 @@ def access(action):
     turn()
 
 #textTest()
-start()
+win()
+#start()

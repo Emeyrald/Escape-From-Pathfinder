@@ -1,0 +1,7 @@
+Room and object descriptions are always complete; 
+never any need to LOOK AT or EXAMINE any object. 
+In any room, if directions into other rooms are 
+given, then the list is complete: no other compass 
+directions lead anywhere. Thus, if a room description 
+ends with "There are doors to the north and south," 
+then there is no reason to try going east.

@@ -1,0 +1,9 @@
+For these commands, you need to add on a word(s) after the command:
+Go: Moves your character to the room in the specified direction.
+--Usage: "go direction" replace direction with either north, south, east, or west.
+Get: Gets the specified item that is in the room that you're currently in.
+--Usage "get <item>" replace <item> with the item(s) in the room that you're currently in.
+Use: Uses the specified item on something in the room that you're currently in.
+--Usage: "use <item>" replace <item> with the item in your inventory that you want to use.
+Access: Accesses the specified object in the room that you're currently in.
+--Usage: "access <object>" replace <object> with the object you would like to access.

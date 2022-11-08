@@ -1,0 +1,9 @@
+For these commands, you only need to say the command and nothing else:
+Help: Repeats these instructions
+--Usage: "help"
+Look: Closely examines the current room.
+--Usage: "look"
+Inventory: Tells you what you're carrying
+--Usage: "inventory"
+Exit: Allows you to end the game
+--Usage: "exit"
