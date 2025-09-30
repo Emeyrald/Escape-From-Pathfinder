@@ -234,11 +234,11 @@ def clearScreen():
 # Reads in the intro text files and displays them
 # Then displays the starting room's title and description
 def start():
-    with open("title.txt") as titleFile:
+    with open("TextFiles/title.txt") as titleFile:
         title = titleFile.read()
-    with open("ship.txt") as shipFile:
+    with open("TextFiles/ship.txt") as shipFile:
         ship = shipFile.read()
-    with open("wakeUp.txt") as wakeUpFile:
+    with open("TextFiles/wakeUp.txt") as wakeUpFile:
         wakeUp = wakeUpFile.read()
     print(bcolors.YELLOW)
     print(title)
@@ -265,17 +265,17 @@ def exitFunction():
 
 # Reads in the text files for the game instructions and displays them one by one
 def help():
-    with open("backstory.txt") as backstoryFile:
+    with open("TextFiles/backstory.txt") as backstoryFile:
         backstory = backstoryFile.read()
-    with open("listOfCommands.txt") as listOfCommandsFile:
+    with open("TextFiles/listOfCommands.txt") as listOfCommandsFile:
         listOfCommands = listOfCommandsFile.read()
-    with open("commandInstructions.txt") as commandInstructionsFile:
+    with open("TextFiles/commandInstructions.txt") as commandInstructionsFile:
         commandInstructions = commandInstructionsFile.read()
-    with open("loneCommands.txt") as loneCommandsFile:
+    with open("TextFiles/loneCommands.txt") as loneCommandsFile:
         loneCommands = loneCommandsFile.read()
-    with open("addonCommands.txt") as addonCommandsFile:
+    with open("TextFiles/addonCommands.txt") as addonCommandsFile:
         addonCommands = addonCommandsFile.read()
-    with open("reminder.txt") as reminderFile:
+    with open("TextFiles/reminder.txt") as reminderFile:
         reminder = reminderFile.read()
     print(bcolors.CYAN)
     clearScreen()
@@ -317,13 +317,13 @@ def help():
 
 # Reads in the ending text files and displays them, then exits the game
 def win():
-    with open("escape.txt") as escapeFile:
+    with open("TextFiles/escape.txt") as escapeFile:
         escape = escapeFile.read()
-    with open("destroyedShip.txt") as destroyedShipFile:
+    with open("TextFiles/destroyedShip.txt") as destroyedShipFile:
         destroyedShip = destroyedShipFile.read()
-    with open("congratulations.txt") as congratulationsFile:
+    with open("TextFiles/congratulations.txt") as congratulationsFile:
         congratulations = congratulationsFile.read()
-    with open("escapePod.txt") as escapePodFile:
+    with open("TextFiles/escapePod.txt") as escapePodFile:
         escapePod = escapePodFile.read()
     clearScreen()
     print(bcolors.CYAN)
